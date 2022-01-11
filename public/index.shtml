@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple SSI</title>
+</head>
+<body>
+    <!--#include file="header.shtml" -->
+    <h1>Test 123</h1>
+
+    <!--#include file="footer.html" -->
+
+    <!-- Method 1: Use callback -->
+    <!-- <script src="callback.js"></script> -->
+    <!-- Method 2: Use Promises -->
+    <script src="promises.js"></script>
+</body>
+</html>
