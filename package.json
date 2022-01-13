@@ -1,5 +1,5 @@
 {
-  "name": "nodejs-simple-ssi",
+  "name": "nodejs-server-ssi",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cv47522/nodejs-simple-ssi.git"
+    "url": "git+https://github.com/cv47522/nodejs-server-ssi.git"
   },
   "author": "Wan-Ting Hsieh",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cv47522/nodejs-server-ssi-notes"
+    "url": "https://github.com/cv47522/nodejs-server-ssi"
   },
-  "homepage": "https://github.com/cv47522/nodejs-server-ssi-notes#readme",
+  "homepage": "https://github.com/cv47522/nodejs-server-ssi#readme",
   "dependencies": {
     "express": "^4.17.2",
     "nodemon": "^2.0.15",

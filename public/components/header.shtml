@@ -1,6 +1,6 @@
-<div>
-    Before date.html.
+<div class="p-4 mb-2 bg-warning text-dark">
+    Before ./components/date.html.
     <!--#include file="./date.html" -->
-    After date.html.
-    <h2>This is header.shtml.</h2>
+    After ./components/date.html.
+    <h2>This is ./components/header.shtml.</h2>
 </div>
