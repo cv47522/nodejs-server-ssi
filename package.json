@@ -19,9 +19,7 @@
   "homepage": "https://github.com/cv47522/nodejs-server-ssi-notes#readme",
   "dependencies": {
     "express": "^4.17.2",
-    "jm-ssi": "^1.0.4",
     "nodemon": "^2.0.15",
-    "serve-favicon": "^2.5.0",
-    "ssi": "^0.3.0"
+    "serve-favicon": "^2.5.0"
   }
 }

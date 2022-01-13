@@ -3,55 +3,33 @@ const app = express();
 const favicon = require('serve-favicon');
 const path = require('path');
 const fs = require('fs');
-// const ssi = require('ssi');
 const ssi = require('./lib/ssi');
-// const ssi = require('jm-ssi');
 
-const inputDir = path.join(__dirname, 'public');
-const outputDir = path.join(__dirname, 'public', 'out');
+const PORT = 3000;
+const staticRoot = path.join(__dirname, 'public')
+const homepage = path.join(staticRoot, 'index.shtml');
 
-const PORT = 8080;
-/* ssi */
-// const ssiParser = new ssi(inputDir, outputDir, "");
-// const filename = path.join(inputDir, 'index.shtml')
-// const contents = fs.readFileSync(filename, {encoding: "utf8"});
-// const results = ssiParser.parse(filename, contents);
-// const parsedHTML = results.contents;
+let parsedHtml;
 
-/* jm-ssi */
-const root = path.join(__dirname, 'public');
-// const homepage = 'index.shtml';
-const homepage = path.join(root, 'index.shtml');
-
-// const getParsedHTML = async (file, root) => {
-//     try {
-//         const result = await ssi.parse(file, { root });
-//         console.log(result);
-//         return result;
-//     } catch(err) {
-//         console.log(err);
-//     }
-// };
-
-// const parsedHTML = getParsedHTML(homepage, root);
-
-// ssi.parse(homepage, { root })
-ssi.parse(homepage)
-.then(result => {
+const getParsedHtml = async (file) => {
+    const result = await ssi.parse(file);
     console.log(result);
-    parsedHTML = result;
-});
+    parsedHtml =  result;
+};
+
+// convert homepage with ssi directives into complete Html
+getParsedHtml(homepage);
 
 // set a folder serving static files
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(staticRoot));
 // set favicon
-app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.png')));
-// set home page
+app.use(favicon(path.join(staticRoot, 'images', 'favicon.png')));
+// set homepage
 app.get('/', (req, res) => {
-    // res.sendFile(path.join(__dirname, 'public', 'index.shtml'));
-    res.write(parsedHTML);
+    // res.sendFile(path.join(staticRoot, 'index.shtml'));
+    res.write(parsedHtml);
 });
-
+// start a http server
 app.listen(PORT, () =>
     console.log(`Server started at http://localhost:${PORT}`)
 );

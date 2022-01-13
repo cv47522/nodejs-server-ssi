@@ -7,14 +7,14 @@
     <title>Simple SSI</title>
 </head>
 <body>
-    <!--#include file="header.shtml" -->
-    <h1>Test 123</h1>
-
-    <!--#include file="footer.html" -->
-
-    <!-- Method 1: Use callback -->
-    <!-- <script src="callback.js"></script> -->
-    <!-- Method 2: Use Promises -->
-    <script src="promises.js"></script>
+    <div>
+        Before header.shtml.
+        <!--#include file="./components/header.shtml" -->
+        After header.shtml.
+        <h1>This is index.shtml.</h1>
+        Before footer.html.
+        <!--#include file="./components/footer.html" -->
+        After footer.html.
+    </div>
 </body>
 </html>
