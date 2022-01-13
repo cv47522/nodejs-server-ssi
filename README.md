@@ -37,7 +37,7 @@ ps. The file path should be relative.
 
 3. (Optional) Or create your own HTML/SHTML files following the above `include` directive syntax.
 
-4. Create an `index.js` and import the module. (**ps.**, The server of the module can be started **with or without specifying a port and a file directory since it has its default values**.)
+4. Create an `index.js` and import the module. (**ps.** The server of the module can be started **with or without specifying a port and a file directory since it has its default values**.)
 
     ```bash
     # bash

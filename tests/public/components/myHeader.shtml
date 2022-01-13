@@ -1,0 +1,6 @@
+<div class="p-4 mb-2 bg-warning text-dark">
+    Before ./components/myDate.html.
+    <!--#include file="./myDate.html" -->
+    After ./components/myDate.html.
+    <h2>This is ./components/myHeader.shtml.</h2>
+</div>
